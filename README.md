@@ -1,14 +1,14 @@
-# VKU Room Booking
+# MiniProject 2 - VKU Room Booking
 
 Ứng dụng mobile đặt phòng học/phòng máy dành cho sinh viên và giảng viên VKU.
 
-## 📌 Giới thiệu
+##  Giới thiệu
 
 VKU Room Booking là ứng dụng đặt phòng học trên nền tảng mobile, giúp sinh viên và giảng viên tìm kiếm phòng, kiểm tra trạng thái phòng và đặt phòng theo ngày và ca học.
 
 Hệ thống sử dụng Supabase để lưu trữ và đồng bộ dữ liệu, đồng thời hỗ trợ quản lý phòng và lịch đặt cho Admin.
 
-## ✨ Chức năng
+##  Chức năng
 
 - Đăng ký, đăng nhập và đăng xuất
 - Quản lý thông tin cá nhân
@@ -26,7 +26,7 @@ Hệ thống sử dụng Supabase để lưu trữ và đồng bộ dữ liệu,
 - Quản lý trạng thái phòng: hoạt động / bảo trì
 - Giao diện mobile với animation
 
-## 🛠️ Công nghệ sử dụng
+##  Công nghệ sử dụng
 
 - React Native
 - Expo SDK 57
@@ -37,7 +37,7 @@ Hệ thống sử dụng Supabase để lưu trữ và đồng bộ dữ liệu,
 - React Native Reanimated
 - Expo Router
 
-## 📂 Cấu trúc thư mục
+##  Cấu trúc thư mục
 
 ```text
 src/
@@ -51,7 +51,7 @@ src/
 └── types/        # TypeScript types
 
 ```
-## 🚀 Cài đặt và chạy project
+##  Cài đặt và chạy project
 1. Cài đặt dependencies
 npm install
 
@@ -64,9 +64,9 @@ EXPO_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 npx expo start
 
 Sau đó có thể chạy ứng dụng bằng Android Emulator, thiết bị Android hoặc Expo Go.
-```
 
-## 👥 Vai trò người dùng
+```
+##  Vai trò người dùng
 Sinh viên
 - Tìm kiếm và lọc phòng
 - Xem thông tin phòng
@@ -87,7 +87,7 @@ Admin
 - Quản lý lịch đặt
 - Hủy lịch đặt khi cần thiết
 ```
-## 📅 Quy trình đặt phòng
+##  Quy trình đặt phòng
 1. Người dùng đăng nhập.
 2. Tìm kiếm hoặc lọc phòng.
 3. Chọn phòng muốn đặt.
@@ -99,18 +99,18 @@ Admin
 Hệ thống có cơ chế kiểm tra xung đột để hạn chế nhiều người đặt cùng một phòng trong cùng ngày và ca.
 ```
 
-🔄 State Management
+##  State Management
 Project sử dụng Zustand để quản lý trạng thái người dùng và thông tin profile.
 TanStack Query được sử dụng để quản lý dữ liệu từ Supabase, caching, loading/error state và cập nhật dữ liệu sau các thao tác.
 Supabase Realtime được sử dụng để cập nhật dữ liệu phòng và booking theo thời gian thực.
 ```
 
-## 🎯 Mục tiêu
+##  Mục tiêu
 Xây dựng một ứng dụng mobile đặt phòng học thuận tiện, dễ sử dụng và hạn chế tình trạng trùng lịch, đồng thời cung cấp chức năng quản lý cho Admin.
 
 ```
 
-## 👨‍💻 Thông tin project
+##  Thông tin project
 
 **Project:** VKU Room Booking
 
