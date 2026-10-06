@@ -1,56 +1,126 @@
-# Welcome to your Expo app 👋
+# VKU Room Booking
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Ứng dụng mobile đặt phòng học/phòng máy dành cho sinh viên và giảng viên VKU.
 
-## Get started
+## 📌 Giới thiệu
 
-1. Install dependencies
+VKU Room Booking là ứng dụng đặt phòng học trên nền tảng mobile, giúp sinh viên và giảng viên tìm kiếm phòng, kiểm tra trạng thái phòng và đặt phòng theo ngày và ca học.
 
-   ```bash
-   npm install
-   ```
+Hệ thống sử dụng Supabase để lưu trữ và đồng bộ dữ liệu, đồng thời hỗ trợ quản lý phòng và lịch đặt cho Admin.
 
-2. Start the app
+## ✨ Chức năng
 
-   ```bash
-   npx expo start
-   ```
+- Đăng ký, đăng nhập và đăng xuất
+- Quản lý thông tin cá nhân
+- Tìm kiếm phòng
+- Lọc phòng theo nhiều tiêu chí
+- Xem thông tin và trạng thái phòng
+- Chọn ngày và ca học
+- Đặt phòng
+- Kiểm tra và xử lý xung đột lịch đặt
+- Xem lịch sử đặt phòng
+- Hủy lịch đặt
+- Cập nhật dữ liệu theo thời gian thực
+- Admin quản lý phòng
+- Admin quản lý lịch đặt
+- Quản lý trạng thái phòng: hoạt động / bảo trì
+- Giao diện mobile với animation
 
-In the output, you'll find options to open the app in a
+## 🛠️ Công nghệ sử dụng
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- React Native
+- Expo SDK 57
+- TypeScript
+- Supabase
+- Zustand
+- TanStack Query
+- React Native Reanimated
+- Expo Router
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 📂 Cấu trúc thư mục
 
-## Get a fresh project
+```text
+src/
+├── app/          # Màn hình và navigation
+├── components/   # Các component giao diện
+├── hooks/        # Custom hooks và TanStack Query
+├── stores/       # Zustand state management
+├── lib/          # Supabase và các tiện ích
+├── screens/      # Các màn hình ứng dụng
+├── constants/    # Các hằng số
+└── types/        # TypeScript types
 
-When you're ready, run:
+```
+## 🚀 Cài đặt và chạy project
+1. Cài đặt dependencies
+npm install
 
-```bash
-npm run reset-project
+2. Cấu hình biến môi trường
+Tạo file .env ở thư mục gốc:
+EXPO_PUBLIC_SUPABASE_URL=your_supabase_url
+EXPO_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+
+3. Khởi chạy ứng dụng
+npx expo start
+
+Sau đó có thể chạy ứng dụng bằng Android Emulator, thiết bị Android hoặc Expo Go.
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 👥 Vai trò người dùng
+Sinh viên
+- Tìm kiếm và lọc phòng
+- Xem thông tin phòng
+- Đặt phòng
+- Xem lịch sử đặt phòng
+- Hủy lịch đặt
+- Quản lý thông tin cá nhân
+Giảng viên
+- Tìm kiếm và lọc phòng
+- Xem thông tin phòng
+- Đặt phòng
+- Xem lịch sử đặt phòng
+- Hủy lịch đặt
+- Quản lý thông tin cá nhân
+Admin
+- Quản lý phòng
+- Quản lý trạng thái phòng
+- Quản lý lịch đặt
+- Hủy lịch đặt khi cần thiết
+```
+## 📅 Quy trình đặt phòng
+1. Người dùng đăng nhập.
+2. Tìm kiếm hoặc lọc phòng.
+3. Chọn phòng muốn đặt.
+4. Chọn ngày và ca học.
+5. Hệ thống kiểm tra trạng thái phòng.
+6. Xác nhận đặt phòng.
+7. Lịch đặt được lưu vào Supabase.
+8. Dữ liệu được cập nhật trên ứng dụng.
+Hệ thống có cơ chế kiểm tra xung đột để hạn chế nhiều người đặt cùng một phòng trong cùng ngày và ca.
+```
 
-### Other setup steps
+🔄 State Management
+Project sử dụng Zustand để quản lý trạng thái người dùng và thông tin profile.
+TanStack Query được sử dụng để quản lý dữ liệu từ Supabase, caching, loading/error state và cập nhật dữ liệu sau các thao tác.
+Supabase Realtime được sử dụng để cập nhật dữ liệu phòng và booking theo thời gian thực.
+```
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+## 🎯 Mục tiêu
+Xây dựng một ứng dụng mobile đặt phòng học thuận tiện, dễ sử dụng và hạn chế tình trạng trùng lịch, đồng thời cung cấp chức năng quản lý cho Admin.
 
-## Learn more
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+## 👨‍💻 Thông tin project
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+**Project:** VKU Room Booking
 
-## Join the community
+**Môn học:** Phát triển ứng dụng đa nền tảng
 
-Join our community of developers creating universal apps.
+**Sinh viên thực hiện:** Lê Thị Mỹ Duyên
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+**Framework:** React Native + Expo
+
+**Backend:** Supabase
+
+**Ngôn ngữ:** TypeScript
+
