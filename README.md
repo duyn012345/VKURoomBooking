@@ -67,6 +67,7 @@ Sau đó có thể chạy ứng dụng bằng Android Emulator, thiết bị And
 
 ```
 ##  Vai trò người dùng
+
 Sinh viên
 - Tìm kiếm và lọc phòng
 - Xem thông tin phòng
@@ -98,8 +99,7 @@ Admin
 8. Dữ liệu được cập nhật trên ứng dụng.
 Hệ thống có cơ chế kiểm tra xung đột để hạn chế nhiều người đặt cùng một phòng trong cùng ngày và ca.
 ```
-
-##  State Management
+## State Management
 Project sử dụng Zustand để quản lý trạng thái người dùng và thông tin profile.
 TanStack Query được sử dụng để quản lý dữ liệu từ Supabase, caching, loading/error state và cập nhật dữ liệu sau các thao tác.
 Supabase Realtime được sử dụng để cập nhật dữ liệu phòng và booking theo thời gian thực.
